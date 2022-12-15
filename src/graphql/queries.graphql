@@ -1,0 +1,85 @@
+query {
+  getUser(id: "6361793739272d504b712e20") {
+    email
+    username
+  }
+}
+
+query {
+  getProducts {
+    title
+  }
+}
+
+query {
+  getProducts(field: "title", value: "Refined Fresh Ball") {
+    title
+  }
+}
+
+query {
+  getCart(userId: "636818ec182195b2b0b6b37f") {
+    id
+    products {
+      title
+      price
+    }
+  }
+}
+
+mutation {
+  createProduct(data: {
+    title: "Campera"
+    price: 600
+    thumbnail: "www.tiendaderopa/genial/camperas.com"
+  }) {
+    id
+    title
+    price
+    thumbnail
+  }
+}
+
+mutation {
+  updateProduct(id: "6383aa53d7301a7e29979915", data: {
+    title: "Camperón Genial"
+    thumbnail: "www.tiendaderopa/genial/camperas.com"
+    price: 1500
+    quantity: 5
+  }) {
+    id
+    title
+    price
+    thumbnail
+    quantity
+  }
+}
+
+#// Usar el ID del último producto creado
+mutation {
+  deleteProduct(id: "638dfadb8ee3d425228272f0") {
+    title
+  }
+}
+
+mutation {
+  addProductToCart(userId: "636818ec182195b2b0b6b37f", productId: "6366a83342202216f2417a73") {
+    id
+    userId
+    products {
+      title
+      price
+      thumbnail
+    }
+  }
+}
+
+mutation {
+  deleteProductFromCart(userId: "636818ec182195b2b0b6b37f", productId: "6366a83342202216f2417a73") {
+    id
+    userId
+    products{
+      title
+    }
+  }
+}
