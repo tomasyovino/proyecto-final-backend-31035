@@ -1,10 +1,54 @@
-<div class="d-flex flex-column justify-content-between align-items-center">
-    <div id="messages" class="container">
-        
+<div class="container text-center my-3">
+    <div class="header d-flex justify-content-between">
+        <button onclick="location.href='/api/main'"><h1>LOGO</h1></button>
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src={{userData.imgUrl}} alt="avatar" style="width: 100px; max-height: 80px; border-radius: 100%;" />
+            </button>
+            <ul class="dropdown-menu">
+                <li>
+                    <button
+                        class="dropdown-item"
+                        onclick="location.href='/api/profile'"
+                    >
+                        Perfil
+                    </button>
+                </li>
+                <li>
+                    <button
+                        class="dropdown-item"
+                        onclick="location.href='/api/cart'"
+                    >
+                        Carrito
+                    </button>
+                </li>
+                <li>
+                    <button
+                        class="dropdown-item"
+                        onclick="location.href='/api/chat'"
+                    >
+                        Chat
+                    </button>
+                </li>
+                <li>
+                    <button
+                        class="dropdown-item"
+                        onclick="location.href='/api/logout'"
+                    >
+                        Salir
+                    </button>
+                </li>
+            </ul>
+        </div>
     </div>
-    <form id="message-form" style="margin-top: 50px;" class="d-flex flex-column">
-        <input type="hidden" id="message-email" value={{email}} />
-        <textarea id="message-content" rows="3" class="p-2" style="border-radius: 6px; outline: none; margin-bottom: 20px;"></textarea>
-        <button class="btn btn-dark">Send</button>
-    </form>
+    <div class="d-flex flex-column justify-content-between align-items-center my-3">
+        <div id="messages" class="container">
+            
+        </div>
+        <form id="message-form" style="margin-top: 50px;" class="d-flex flex-column">
+            <input type="hidden" id="message-email" value={{userData.email}} />
+            <textarea id="message-content" rows="3" class="p-2" style="border-radius: 6px; outline: none; margin-bottom: 20px;"></textarea>
+            <button class="btn btn-dark">Send</button>
+        </form>
+    </div>
 </div>

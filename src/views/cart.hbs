@@ -2,35 +2,43 @@
     <div class="header d-flex justify-content-between">
         <button onclick="location.href='/api/main'"><h1>LOGO</h1></button>
         <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <img src={{userData.imgUrl}} alt="avatar" />
-        </button>
-        <ul class="dropdown-menu">
-            <li>
-            <button
-                class="dropdown-item"
-                onclick="location.href='/api/profile'"
-            >
-                Perfil
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src={{userData.imgUrl}} alt="avatar" style="width: 100px; max-height: 80px; border-radius: 100%;" />
             </button>
-            </li>
-            <li>
-            <button
-                class="dropdown-item"
-                onclick="location.href='/api/cart'"
-            >
-                Carrito
-            </button>
-            </li>
-            <li>
-            <button
-                class="dropdown-item"
-                onclick="location.href='/api/logout'"
-            >
-                Salir
-            </button>
-            </li>
-        </ul>
+            <ul class="dropdown-menu">
+                <li>
+                    <button
+                        class="dropdown-item"
+                        onclick="location.href='/api/profile'"
+                    >
+                        Perfil
+                    </button>
+                </li>
+                <li>
+                    <button
+                        class="dropdown-item"
+                        onclick="location.href='/api/cart'"
+                    >
+                        Carrito
+                    </button>
+                </li>
+                <li>
+                    <button
+                        class="dropdown-item"
+                        onclick="location.href='/api/chat'"
+                    >
+                        Chat
+                    </button>
+                </li>
+                <li>
+                    <button
+                        class="dropdown-item"
+                        onclick="location.href='/api/logout'"
+                    >
+                        Salir
+                    </button>
+                </li>
+            </ul>
         </div>
     </div>
 
