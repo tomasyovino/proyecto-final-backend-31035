@@ -17,8 +17,24 @@ switch (PERS) {
         break;
 };
 
-async function createNewMessage(email, type, content) {
-    return await messagesDAO.createMessage(email, type, content);
+async function createNewMessage(email, content) {
+    return await messagesDAO.createMessage(email, content);
 };
 
-export { createNewMessage };
+async function getMessages() {
+    return await messagesDAO.listAll();
+};
+
+async function getMessage(id) {
+    return await messagesDAO.list(id);
+};
+
+async function deleteMessage(id) {
+    return await messagesDAO.delete(id);
+};
+
+async function updateMessage(id, obj) {
+    return await messagesDAO.updateMessage(id, obj);
+};
+
+export { createNewMessage, getMessages, getMessage, deleteMessage, updateMessage };

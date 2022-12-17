@@ -16,18 +16,22 @@ class MessagesDAOMongo extends MongoDbContainer {
         return instance;
     };
 
-    async createMessage(email, type, content) {
+    async createMessage(email, content) {
         try {
-            let createdAt = Date.now();
-            const today = new Date(createdAt);
-            if(type === false) email = "examplecoder24@gmail.com";
             const newMessage = await MessageModel.create({
                 email,
-                type,
-                dateAndTime: today.toUTCString(),
                 content,
             });
             return newMessage;
+        } catch (err) {
+            errorLogger.error(err);
+        };
+    };
+
+    async updateMessage(id, obj) {
+        try {
+            const updateMessage = await MessageModel.findByIdAndUpdate(id, obj);
+            return updateMessage;
         } catch (err) {
             errorLogger.error(err);
         };

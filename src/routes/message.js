@@ -4,7 +4,7 @@ import { auth } from "../middlewares/auth.js";
 const messageRouter = Router();
 
 messageRouter.get("/", auth, async (req, res) => {
-    res.send("Este es el chat del usuario");
+    res.render("chat", { email: req.user.email });
 });
 
 messageRouter.get("/:email", auth, async (req, res) => {
