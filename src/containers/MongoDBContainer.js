@@ -1,5 +1,5 @@
 import dotenv from "dotenv";
-import { mongoConnect } from "../utils/config.js";
+import { mongoConnect } from "../utils/db.js";
 import { errorLogger } from "../utils/loggers.js";
 
 dotenv.config();

@@ -6,7 +6,9 @@ const CartSchema = new mongoose.Schema({
         ref: "User",
     },
     products: {type: Array, required: true, max: 100},
-    createdAt: {type: Date}
+},
+{
+    timestamps: true
 });
 
 export const CartModel = mongoose.model("Cart", CartSchema);

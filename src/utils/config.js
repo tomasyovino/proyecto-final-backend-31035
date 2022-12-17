@@ -1,17 +1,7 @@
-import mongoose from "mongoose";
 import { createTransport } from "nodemailer";
 import dotenv from "dotenv";
-import { errorLogger } from "./loggers.js";
 
 dotenv.config();
-
-const mongoConnect = async (MONGO_URI) => {
-    try {
-        return await mongoose.connect(MONGO_URI);
-    } catch (err) {
-        errorLogger.error(err);
-    };
-};
 
 const nodemailerConfig = {
     adminEmail: "examplecoder24@gmail.com",
@@ -29,4 +19,4 @@ const twilioConfig = {
     authToken: "0175e38ffd54d994f88e458f07be5b69"
 }
 
-export { mongoConnect, nodemailerConfig, twilioConfig };
+export { nodemailerConfig, twilioConfig };

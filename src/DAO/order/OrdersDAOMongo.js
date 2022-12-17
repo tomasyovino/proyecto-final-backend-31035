@@ -20,7 +20,6 @@ class OrdersDAOMongo extends MongoDbContainer {
         try {
             let orderNumber;
             const orders = await this.listAll();
-            const createdAt = Date.now();
             
             if(orders.length < 1) {
                 orderNumber = 1;
@@ -31,7 +30,6 @@ class OrdersDAOMongo extends MongoDbContainer {
             const newOrder = await OrderModel.create({
                 products: products,
                 orderNumber,
-                createdAt,
                 state: "Generated",
                 userEmail
             });

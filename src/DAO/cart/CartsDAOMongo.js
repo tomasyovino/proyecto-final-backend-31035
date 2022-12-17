@@ -19,11 +19,9 @@ class CartsDAOMongo extends MongoDbContainer {
 
     async save(userId, product) {
         try {
-            let createdAt = Date.now();
             const newCart = await CartModel.create({
                 userId,
-                products: [product],
-                createdAt
+                products: [product]
             });
             return newCart;
         } catch (err) {
