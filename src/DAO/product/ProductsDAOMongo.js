@@ -28,7 +28,7 @@ class ProductsDAOMongo extends MongoDbContainer {
 
     async findByCategory(category) {
         try {
-            const element = await this.collection.find({category});
+            const element = await ProductModel.find({category});
             return element;
         } catch (err) {
             errorLogger.error(err);

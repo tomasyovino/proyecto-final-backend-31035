@@ -16,6 +16,15 @@ class MessagesDAOMongo extends MongoDbContainer {
         return instance;
     };
 
+    async getMessagesByUserEmail(email) {
+        try {
+            const element = await MessageModel.find({email});
+            return element;
+        } catch (err) {
+            errorLogger.error(err);
+        }
+    };
+
     async createMessage(email, content) {
         try {
             const newMessage = await MessageModel.create({

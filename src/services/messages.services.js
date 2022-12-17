@@ -29,6 +29,10 @@ async function getMessage(id) {
     return await messagesDAO.list(id);
 };
 
+async function getMessagesByUserEmail(email) {
+    return await messagesDAO.getMessagesByUserEmail(email);
+};
+
 async function deleteMessage(id) {
     return await messagesDAO.delete(id);
 };
@@ -37,4 +41,4 @@ async function updateMessage(id, obj) {
     return await messagesDAO.updateMessage(id, obj);
 };
 
-export { createNewMessage, getMessages, getMessage, deleteMessage, updateMessage };
+export { createNewMessage, getMessages, getMessage, getMessagesByUserEmail, deleteMessage, updateMessage };
