@@ -1,13 +1,13 @@
 import OrdersDAOMongo from "../DAO/order/OrdersDAOMongo.js";
 import OrdersDAOFile from "../DAO/order/OrdersDAOFile.js";
 import OrdersDAOMemory from "../DAO/order/OrdersDAOMemory.js";
+import { config } from "../utils/config.js";
 import { errorLogger } from "../utils/loggers.js";
 import { nodemailerConfig, twilioConfig } from "../utils/config.js";
 
 let ordersDAO;
-const PERS = process.env.PERS || "mongodb";
 
-switch (PERS) {
+switch (config.pers) {
     case "mongodb":
         ordersDAO = OrdersDAOMongo.createInstance();
         break;
@@ -36,7 +36,7 @@ async function sendNewOrderEmail(order) {
 
         const emailContent = {
             from: "Coder Ecommerce",
-            to: userEmail,
+            to: order.userEmail,
             subject: `New order`,
             html: `
                 <div style="width: 100%; background-color: #f3f9ff; padding: 5rem 0">

@@ -3,15 +3,12 @@ import UsersDAOFile from "../DAO/user/UserDAOFile.js";
 import UsersDAOMemory from "../DAO/user/UserDAOMemory.js";
 import bcrypt from "bcrypt";
 import { nodemailerConfig } from "../utils/config.js";
+import { config } from "../utils/config.js";
 import { errorLogger } from "../utils/loggers.js";
-import dotenv from "dotenv";
-
-dotenv.config();
 
 let usersDAO;
-const PERS = process.env.PERS || "mongodb";
 
-switch (PERS) {
+switch (config.pers) {
     case "mongodb":
         usersDAO = UsersDAOMongo.createInstance();
         break;

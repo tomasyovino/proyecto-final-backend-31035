@@ -1,11 +1,8 @@
-import dotenv from "dotenv";
+import { config } from "../utils/config.js";
 import { mongoConnect } from "../utils/db.js";
 import { errorLogger } from "../utils/loggers.js";
 
-dotenv.config();
-
-const MONGO_URI = process.env.MONGO_URI || "mongodb+srv://tomyov24:Alessandro.24@cluster0.zft9dcg.mongodb.net/coder-ecommerce?retryWrites=true&w=majority";
-mongoConnect(MONGO_URI);
+mongoConnect(config.mongo_uri);
 
 class MongoDbContainer {
     constructor(collection) {

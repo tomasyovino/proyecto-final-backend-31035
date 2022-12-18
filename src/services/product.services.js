@@ -1,11 +1,11 @@
 import ProductsDAOMongo from "../DAO/product/ProductsDAOMongo.js";
 import ProductsDAOFile from "../DAO/product/ProductsDAOFile.js";
 import ProductsDAOMemory from "../DAO/product/ProductsDAOMemory.js";
+import { config } from "../utils/config.js";
 
 let productsDAO;
-const PERS = process.env.PERS || "mongodb";
 
-switch (PERS) {
+switch (config.pers) {
     case "mongodb":
         productsDAO = ProductsDAOMongo.createInstance();
         break;

@@ -5074,3 +5074,83 @@
   moreInfo: 'https://www.twilio.com/docs/errors/20003',
   details: undefined
 }
+[2022-12-18T11:52:37.002] [ERROR] error - ReferenceError: userEmail is not defined
+    at sendNewOrderEmail (file:///C:/Users/Tomy%20puto/Desktop/proy_final/src/services/order.services.js:39:17)
+    at createNewOrderController (file:///C:/Users/Tomy%20puto/Desktop/proy_final/src/controllers/Orders.controller.js:7:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-12-18T11:52:37.004] [ERROR] error - ReferenceError: twilio is not defined
+    at sendNewOrderMessage (file:///C:/Users/Tomy%20puto/Desktop/proy_final/src/services/order.services.js:76:24)
+    at createNewOrderController (file:///C:/Users/Tomy%20puto/Desktop/proy_final/src/controllers/Orders.controller.js:8:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-12-18T11:53:03.664] [ERROR] error - ReferenceError: userEmail is not defined
+    at sendNewOrderEmail (file:///C:/Users/Tomy%20puto/Desktop/proy_final/src/services/order.services.js:39:17)
+    at createNewOrderController (file:///C:/Users/Tomy%20puto/Desktop/proy_final/src/controllers/Orders.controller.js:7:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-12-18T11:53:03.665] [ERROR] error - ReferenceError: twilio is not defined
+    at sendNewOrderMessage (file:///C:/Users/Tomy%20puto/Desktop/proy_final/src/services/order.services.js:76:24)
+    at createNewOrderController (file:///C:/Users/Tomy%20puto/Desktop/proy_final/src/controllers/Orders.controller.js:8:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-12-18T11:53:31.447] [ERROR] error - ReferenceError: userEmail is not defined
+    at sendNewOrderEmail (file:///C:/Users/Tomy%20puto/Desktop/proy_final/src/services/order.services.js:39:17)
+    at createNewOrderController (file:///C:/Users/Tomy%20puto/Desktop/proy_final/src/controllers/Orders.controller.js:7:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-12-18T11:53:31.447] [ERROR] error - ReferenceError: twilio is not defined
+    at sendNewOrderMessage (file:///C:/Users/Tomy%20puto/Desktop/proy_final/src/services/order.services.js:76:24)
+    at createNewOrderController (file:///C:/Users/Tomy%20puto/Desktop/proy_final/src/controllers/Orders.controller.js:8:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-12-18T11:53:31.630] [ERROR] error - ReferenceError: userEmail is not defined
+    at sendNewOrderEmail (file:///C:/Users/Tomy%20puto/Desktop/proy_final/src/services/order.services.js:39:17)
+    at createNewOrderController (file:///C:/Users/Tomy%20puto/Desktop/proy_final/src/controllers/Orders.controller.js:7:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-12-18T11:53:31.631] [ERROR] error - ReferenceError: twilio is not defined
+    at sendNewOrderMessage (file:///C:/Users/Tomy%20puto/Desktop/proy_final/src/services/order.services.js:76:24)
+    at createNewOrderController (file:///C:/Users/Tomy%20puto/Desktop/proy_final/src/controllers/Orders.controller.js:8:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-12-18T11:53:31.789] [ERROR] error - ReferenceError: userEmail is not defined
+    at sendNewOrderEmail (file:///C:/Users/Tomy%20puto/Desktop/proy_final/src/services/order.services.js:39:17)
+    at createNewOrderController (file:///C:/Users/Tomy%20puto/Desktop/proy_final/src/controllers/Orders.controller.js:7:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-12-18T11:53:31.789] [ERROR] error - ReferenceError: twilio is not defined
+    at sendNewOrderMessage (file:///C:/Users/Tomy%20puto/Desktop/proy_final/src/services/order.services.js:76:24)
+    at createNewOrderController (file:///C:/Users/Tomy%20puto/Desktop/proy_final/src/controllers/Orders.controller.js:8:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-12-18T11:53:31.940] [ERROR] error - ReferenceError: userEmail is not defined
+    at sendNewOrderEmail (file:///C:/Users/Tomy%20puto/Desktop/proy_final/src/services/order.services.js:39:17)
+    at createNewOrderController (file:///C:/Users/Tomy%20puto/Desktop/proy_final/src/controllers/Orders.controller.js:7:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-12-18T11:53:31.941] [ERROR] error - ReferenceError: twilio is not defined
+    at sendNewOrderMessage (file:///C:/Users/Tomy%20puto/Desktop/proy_final/src/services/order.services.js:76:24)
+    at createNewOrderController (file:///C:/Users/Tomy%20puto/Desktop/proy_final/src/controllers/Orders.controller.js:8:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-12-18T11:55:43.447] [ERROR] error - ReferenceError: userEmail is not defined
+    at sendNewOrderEmail (file:///C:/Users/Tomy%20puto/Desktop/proy_final/src/services/order.services.js:39:17)
+    at createNewOrderController (file:///C:/Users/Tomy%20puto/Desktop/proy_final/src/controllers/Orders.controller.js:7:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-12-18T11:55:43.449] [ERROR] error - ReferenceError: twilio is not defined
+    at sendNewOrderMessage (file:///C:/Users/Tomy%20puto/Desktop/proy_final/src/services/order.services.js:76:24)
+    at createNewOrderController (file:///C:/Users/Tomy%20puto/Desktop/proy_final/src/controllers/Orders.controller.js:8:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-12-18T11:56:01.421] [ERROR] error - ReferenceError: userEmail is not defined
+    at sendNewOrderEmail (file:///C:/Users/Tomy%20puto/Desktop/proy_final/src/services/order.services.js:39:17)
+    at createNewOrderController (file:///C:/Users/Tomy%20puto/Desktop/proy_final/src/controllers/Orders.controller.js:7:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-12-18T11:56:01.421] [ERROR] error - ReferenceError: twilio is not defined
+    at sendNewOrderMessage (file:///C:/Users/Tomy%20puto/Desktop/proy_final/src/services/order.services.js:76:24)
+    at createNewOrderController (file:///C:/Users/Tomy%20puto/Desktop/proy_final/src/controllers/Orders.controller.js:8:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-12-18T11:57:53.347] [ERROR] error - ReferenceError: userEmail is not defined
+    at sendNewOrderEmail (file:///C:/Users/Tomy%20puto/Desktop/proy_final/src/services/order.services.js:39:17)
+    at createNewOrderController (file:///C:/Users/Tomy%20puto/Desktop/proy_final/src/controllers/Orders.controller.js:7:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-12-18T11:57:53.350] [ERROR] error - ReferenceError: twilio is not defined
+    at sendNewOrderMessage (file:///C:/Users/Tomy%20puto/Desktop/proy_final/src/services/order.services.js:76:24)
+    at createNewOrderController (file:///C:/Users/Tomy%20puto/Desktop/proy_final/src/controllers/Orders.controller.js:8:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-12-18T12:05:39.052] [ERROR] error - ReferenceError: twilio is not defined
+    at sendNewOrderMessage (file:///C:/Users/Tomy%20puto/Desktop/proy_final/src/services/order.services.js:76:24)
+    at createNewOrderController (file:///C:/Users/Tomy%20puto/Desktop/proy_final/src/controllers/Orders.controller.js:8:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-12-18T12:53:40.446] [ERROR] error - ReferenceError: twilio is not defined
+    at sendNewOrderMessage (file:///C:/Users/Tomy%20puto/Desktop/proy_final/src/services/order.services.js:76:24)
+    at createNewOrderController (file:///C:/Users/Tomy%20puto/Desktop/proy_final/src/controllers/Orders.controller.js:8:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)

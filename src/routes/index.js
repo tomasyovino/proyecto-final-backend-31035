@@ -8,7 +8,6 @@ import profileRouter from "./profile.js";
 import productsRouter from "./products.js";
 import cartRouter from "./cart.js";
 import messageRouter from "./message.js";
-import graphqlRouter from "./graphql.js";
 
 const router = Router();
 
@@ -20,7 +19,6 @@ router.use("/profile", profileRouter);
 router.use("/products", productsRouter);
 router.use("/cart", cartRouter);
 router.use("/chat", messageRouter);
-router.use("/graphql", graphqlRouter);
 
 
 

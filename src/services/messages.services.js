@@ -1,11 +1,11 @@
 import MessagesDAOMongo from "../DAO/message/MessagesDAOMongo.js";
 import MessagesDAOFile from "../DAO/message/MessagesDAOFile.js";
 import MessagesDAOMemory from "../DAO/message/MessagesDAOMemory.js";
+import { config } from "../utils/config.js";
 
 let messagesDAO;
-const PERS = process.env.PERS || "mongodb";
 
-switch (PERS) {
+switch (config.pers) {
     case "mongodb":
         messagesDAO = MessagesDAOMongo.createInstance();
         break;
