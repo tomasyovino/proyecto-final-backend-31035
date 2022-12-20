@@ -19,15 +19,23 @@ class CartsDAOMongo extends MongoDbContainer {
 
     async save(userId, product) {
         try {
-            const newCart = await CartModel.create({
-                userId,
-                products: [product]
-            });
+            let newCart
+            if(product !== null) {
+                newCart = await CartModel.create({
+                    userId,
+                    products: [product]
+                });
+            } else {
+                newCart = await CartModel.create({
+                    userId,
+                    products: [],
+                });
+            };
             return newCart;
         } catch (err) {
             errorLogger.error(err);
-        }
-    }
+        };
+    };
 
     async addProduct(userId, productId) {
         try {

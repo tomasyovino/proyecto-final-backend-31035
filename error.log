@@ -5815,3 +5815,55 @@
       at Query.cast (C:\Users\Tomy puto\Desktop\proy_final\node_modules\mongoose\lib\query.js:5319:12),
   valueType: 'string'
 }
+[2022-12-20T18:46:09.175] [ERROR] error - ReferenceError: awaitCartModel is not defined
+    at CartsDAOMongo.save (file:///C:/Users/Tomy%20puto/Desktop/proy_final/src/DAO/CartsDAOMongo.js:29:17)
+    at createCart (file:///C:/Users/Tomy%20puto/Desktop/proy_final/src/services/cart.services.js:7:27)
+    at verifyCartExistenceController (file:///C:/Users/Tomy%20puto/Desktop/proy_final/src/controllers/Carts.controller.js:22:22)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async file:///C:/Users/Tomy%20puto/Desktop/proy_final/src/routes/main.js:13:5
+[2022-12-20T18:46:47.884] [ERROR] error - ReferenceError: awaitCartModel is not defined
+    at CartsDAOMongo.save (file:///C:/Users/Tomy%20puto/Desktop/proy_final/src/DAO/CartsDAOMongo.js:29:17)
+    at createCart (file:///C:/Users/Tomy%20puto/Desktop/proy_final/src/services/cart.services.js:7:27)
+    at verifyCartExistenceController (file:///C:/Users/Tomy%20puto/Desktop/proy_final/src/controllers/Carts.controller.js:22:22)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async file:///C:/Users/Tomy%20puto/Desktop/proy_final/src/routes/main.js:13:5
+[2022-12-20T18:47:36.236] [ERROR] error - ReferenceError: awaitCartModel is not defined
+    at CartsDAOMongo.save (file:///C:/Users/Tomy%20puto/Desktop/proy_final/src/DAO/CartsDAOMongo.js:29:17)
+    at createCart (file:///C:/Users/Tomy%20puto/Desktop/proy_final/src/services/cart.services.js:7:27)
+    at verifyCartExistenceController (file:///C:/Users/Tomy%20puto/Desktop/proy_final/src/controllers/Carts.controller.js:22:22)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async file:///C:/Users/Tomy%20puto/Desktop/proy_final/src/routes/main.js:13:18
+[2022-12-20T18:54:14.434] [ERROR] error - ReferenceError: awaitCartModel is not defined
+    at CartsDAOMongo.save (file:///C:/Users/Tomy%20puto/Desktop/proy_final/src/DAO/CartsDAOMongo.js:30:17)
+    at createCart (file:///C:/Users/Tomy%20puto/Desktop/proy_final/src/services/cart.services.js:7:27)
+    at verifyCartExistenceController (file:///C:/Users/Tomy%20puto/Desktop/proy_final/src/controllers/Carts.controller.js:23:22)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async file:///C:/Users/Tomy%20puto/Desktop/proy_final/src/routes/main.js:13:18
+[2022-12-20T18:54:42.956] [ERROR] error - ReferenceError: awaitCartModel is not defined
+    at CartsDAOMongo.save (file:///C:/Users/Tomy%20puto/Desktop/proy_final/src/DAO/CartsDAOMongo.js:29:17)
+    at createCart (file:///C:/Users/Tomy%20puto/Desktop/proy_final/src/services/cart.services.js:7:27)
+    at verifyCartExistenceController (file:///C:/Users/Tomy%20puto/Desktop/proy_final/src/controllers/Carts.controller.js:23:22)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async file:///C:/Users/Tomy%20puto/Desktop/proy_final/src/routes/main.js:13:18
+[2022-12-20T18:55:30.152] [ERROR] error - ReferenceError: awaitCartModel is not defined
+    at CartsDAOMongo.save (file:///C:/Users/Tomy%20puto/Desktop/proy_final/src/DAO/CartsDAOMongo.js:29:17)
+    at createCart (file:///C:/Users/Tomy%20puto/Desktop/proy_final/src/services/cart.services.js:8:27)
+    at verifyCartExistenceController (file:///C:/Users/Tomy%20puto/Desktop/proy_final/src/controllers/Carts.controller.js:22:22)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async file:///C:/Users/Tomy%20puto/Desktop/proy_final/src/routes/main.js:13:18
+[2022-12-20T18:55:54.780] [ERROR] error - ReferenceError: awaitCartModel is not defined
+    at CartsDAOMongo.save (file:///C:/Users/Tomy%20puto/Desktop/proy_final/src/DAO/CartsDAOMongo.js:30:17)
+    at createCart (file:///C:/Users/Tomy%20puto/Desktop/proy_final/src/services/cart.services.js:7:27)
+    at verifyCartExistenceController (file:///C:/Users/Tomy%20puto/Desktop/proy_final/src/controllers/Carts.controller.js:22:22)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async file:///C:/Users/Tomy%20puto/Desktop/proy_final/src/routes/main.js:13:18
+[2022-12-20T18:56:18.547] [ERROR] error - ReferenceError: awaitCartModel is not defined
+    at CartsDAOMongo.save (file:///C:/Users/Tomy%20puto/Desktop/proy_final/src/DAO/CartsDAOMongo.js:30:17)
+    at createCart (file:///C:/Users/Tomy%20puto/Desktop/proy_final/src/services/cart.services.js:7:27)
+    at verifyCartExistenceController (file:///C:/Users/Tomy%20puto/Desktop/proy_final/src/controllers/Carts.controller.js:22:22)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async file:///C:/Users/Tomy%20puto/Desktop/proy_final/src/routes/main.js:13:18
+[2022-12-20T19:00:12.630] [ERROR] error - ReferenceError: twilio is not defined
+    at sendNewOrderMessage (file:///C:/Users/Tomy%20puto/Desktop/proy_final/src/services/order.services.js:66:24)
+    at createNewOrderController (file:///C:/Users/Tomy%20puto/Desktop/proy_final/src/controllers/Orders.controller.js:8:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)

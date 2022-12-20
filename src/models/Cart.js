@@ -5,7 +5,7 @@ const CartSchema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: "User",
     },
-    products: {type: Array, required: true, max: 100},
+    products: {type: Array, max: 100},
 },
 {
     timestamps: true

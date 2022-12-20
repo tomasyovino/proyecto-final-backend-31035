@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+import { config } from "../utils/config.js";
 
 const UserSchema = new mongoose.Schema({
   username: {
@@ -36,7 +37,7 @@ const UserSchema = new mongoose.Schema({
 
 UserSchema.methods.setImgUrl = function setImgUrl(filename) {
   const HOST = 'http://localhost';
-  const PORT = process.env.PORT || 3000;
+  const PORT = config.port;
   this.imgUrl = `${HOST}:${PORT}/img/${filename}`
 }
 

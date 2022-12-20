@@ -1,6 +1,6 @@
 import { Router } from "express";
 import { listUserByIdController } from "../controllers/User.controller.js";
-import { getCartByIdController, addProductToCartController, deleteProductFromCartController } from "../controllers/Carts.controller.js";
+import { getCartByIdController, addProductToCartController, deleteCartByIDController ,deleteProductFromCartController } from "../controllers/Carts.controller.js";
 import { createNewOrderController } from "../controllers/Orders.controller.js";
 import { auth } from "../middlewares/auth.js";
 
@@ -27,6 +27,12 @@ cartRouter.post("/buy", async (req, res) => {
   const userCart = await getCartByIdController(userID);
 
   createNewOrderController(userCart.products, userData.email, userData.phoneNumber);
+});
+
+cartRouter.delete("/:id", async (req, res) => {
+  const { id } = req.params;
+  const cart = await deleteCartByIDController(id);
+  res.send(cart);
 });
 
 cartRouter.delete("/product", async (req, res) => {
