@@ -1,7 +1,7 @@
-import MongoDbContainer from "../../containers/MongoDbContainer.js";
+import MongoDbContainer from "../containers/MongoDbContainer.js";
 import bcrypt from "bcrypt";
-import { UserModel } from "../../models/User.js";
-import { errorLogger } from "../../utils/loggers.js";
+import { UserModel } from "../models/User.js";
+import { errorLogger } from "../utils/loggers.js";
 
 let instance = null;
 
@@ -26,6 +26,7 @@ class UsersDAOMongo extends MongoDbContainer {
                 direction,
                 birthDate,
                 phoneNumber,
+                admin: false,
             });
     
             if(file) {

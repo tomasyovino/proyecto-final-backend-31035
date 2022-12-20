@@ -1,24 +1,9 @@
-import MessagesDAOMongo from "../DAO/message/MessagesDAOMongo.js";
-import MessagesDAOFile from "../DAO/message/MessagesDAOFile.js";
-import MessagesDAOMemory from "../DAO/message/MessagesDAOMemory.js";
-import { config } from "../utils/config.js";
+import MessagesDAOMongo from "../DAO/MessagesDAOMongo.js";
 
-let messagesDAO;
+const messagesDAO  = MessagesDAOMongo.createInstance();
 
-switch (config.pers) {
-    case "mongodb":
-        messagesDAO = MessagesDAOMongo.createInstance();
-        break;
-    case "file":
-        messagesDAO = MessagesDAOFile.createInstance();
-        break;
-    case "memory":
-        messagesDAO = MessagesDAOMemory.createInstance();
-        break;
-};
-
-async function createNewMessage(email, content) {
-    return await messagesDAO.createMessage(email, content);
+async function createNewMessage(email, content, admin) {
+    return await messagesDAO.createMessage(email, content, admin);
 };
 
 async function getMessages() {

@@ -1,7 +1,7 @@
 import { createNewMessage, getMessages, getMessage, getMessagesByUserEmail, deleteMessage, updateMessage } from "../services/messages.services.js";
 
-async function createNewMessageController(email, content) {
-    return await createNewMessage(email, content);
+async function createNewMessageController(email, content, admin) {
+    return await createNewMessage(email, content, admin);
 };
 
 async function getMessagesController() {

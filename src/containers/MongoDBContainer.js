@@ -14,23 +14,35 @@ class MongoDbContainer {
             const elements = await this.collection.find().lean();
             return elements;
         } catch (err) {
-            errorLogger.error(err)
+            errorLogger.error(err);
         }
     }
 
     async list(id) {
-        const element = await this.collection.findById(id);
-        return element;
+        try {
+            const element = await this.collection.findById(id);
+            return element;
+        } catch (err) {
+            errorLogger.error(err);
+        }
     }
 
     async delete(id) {
-        const element = await this.collection.findByIdAndDelete(id);
-        return this.listAll();
+        try {
+            const element = await this.collection.findByIdAndDelete(id);
+            return element;
+        } catch (err) {
+            errorLogger.error(err);
+        }
     }
 
     async update(obj) {
-        const element = await this.collection.findByIdAndUpdate(obj.id, { $set: obj }, { new: true });
-        return element;
+        try {
+            const element = await this.collection.findByIdAndUpdate(obj.id, { $set: obj }, { new: true });
+            return element;
+        } catch (err) {
+            errorLogger.error(err);
+        }
     }
 }
 

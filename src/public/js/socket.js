@@ -4,9 +4,9 @@ export const loadMessages = (callback) => {
     socket.on("server:loadMessages", callback);
 };
 
-export const saveMessage = (email, content) => {
+export const saveMessage = (email, content, admin) => {
     socket.emit("client:saveMessage", {
-        email, content
+        email, content, admin
     });
 };
 

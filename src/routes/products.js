@@ -12,7 +12,11 @@ productsRouter.get("/", auth, async (req, res) => {
 productsRouter.get("/:id", auth, async (req, res) => {
     const { id } = req.params;
     let product = await getProductByIdController(id);
-    res.send(product);
+    if (!product) {
+        res.status(404).send({ error: "The searched product does not exist." });
+    } else {
+        res.send(product);
+    };
 });
 
 productsRouter.get("/category/:category", auth, async (req, res) => {

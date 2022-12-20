@@ -1,6 +1,6 @@
-import MongoDbContainer from "../../containers/MongoDbContainer.js";
-import { MessageModel } from "../../models/Message.js";
-import { errorLogger } from "../../utils/loggers.js";
+import MongoDbContainer from "../containers/MongoDbContainer.js";
+import { MessageModel } from "../models/Message.js";
+import { errorLogger } from "../utils/loggers.js";
 
 let instance = null;
 
@@ -25,11 +25,12 @@ class MessagesDAOMongo extends MongoDbContainer {
         }
     };
 
-    async createMessage(email, content) {
+    async createMessage(email, content, admin) {
         try {
             const newMessage = await MessageModel.create({
                 email,
                 content,
+                admin
             });
             return newMessage;
         } catch (err) {

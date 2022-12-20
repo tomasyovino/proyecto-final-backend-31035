@@ -1,24 +1,9 @@
-import UsersDAOMongo from "../DAO/user/UserDAOMongo.js";
-import UsersDAOFile from "../DAO/user/UserDAOFile.js";
-import UsersDAOMemory from "../DAO/user/UserDAOMemory.js";
+import UsersDAOMongo from "../DAO/UserDAOMongo.js";
 import bcrypt from "bcrypt";
 import { nodemailerConfig } from "../utils/config.js";
-import { config } from "../utils/config.js";
 import { errorLogger } from "../utils/loggers.js";
 
-let usersDAO;
-
-switch (config.pers) {
-    case "mongodb":
-        usersDAO = UsersDAOMongo.createInstance();
-        break;
-    case "file":
-        usersDAO = UsersDAOFile.createInstance();
-        break;
-    case "memory":
-        usersDAO = UsersDAOMemory.createInstance();
-        break;
-};
+const usersDAO = UsersDAOMongo.createInstance();
 
 async function listUserById(id) {
     return await usersDAO.findById(id);

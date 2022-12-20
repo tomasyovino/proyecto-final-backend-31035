@@ -2,6 +2,7 @@ import { saveMessage, deleteMessage, getMessage, updateMessage } from "./socket.
 
 const messagesList = document.querySelector("#messages");
 const email = document.querySelector("#message-email");
+const admin = document.querySelector("#message-admin");
 const content = document.querySelector("#message-content");
 
 let savedID = "";
@@ -11,7 +12,7 @@ export const onHandleSubmit = (e) => {
     if(savedID) {
         updateMessage(savedID, email.value, content.value);
     } else {
-        saveMessage(email.value, content.value);
+        saveMessage(email.value, content.value, admin.value);
     }
 
     savedID = "";
@@ -29,6 +30,13 @@ export const appendMessage = (message) => {
 
 export const messageUI = (message) => {
     let messagePostedAt = new Date(message.createdAt).toDateString();
+    let user;
+    if(message.admin === true) {
+        user = "System";
+    } else {
+        user = message.email;
+    };
+
     const div = document.createElement("div");
     div.innerHTML = `
         <div class="container d-flex p-2">
@@ -36,7 +44,7 @@ export const messageUI = (message) => {
                 class="p-2"
                 style="background-color:red; color:white; border-radius:30px; max-height: 40px;"
             >
-                ${message.email}
+                ${user}
             </span>
             <div 
                 class="container d-flex justify-content-between align-items-center p-3" style="margin-left:20px; margin-bottom:20px; background-color:gray; color:white; border-radius:30px;"

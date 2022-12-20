@@ -10,7 +10,7 @@ export default (io) => {
         emitMessages();
 
         socket.on("client:saveMessage", async (data) => {
-            const newMessage = await createNewMessageController(data.email, data.content);
+            const newMessage = await createNewMessageController(data.email, data.content, data.admin);
             io.emit("server:savedMessage", newMessage);
         });
 

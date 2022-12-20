@@ -1,21 +1,6 @@
-import ProductsDAOMongo from "../DAO/product/ProductsDAOMongo.js";
-import ProductsDAOFile from "../DAO/product/ProductsDAOFile.js";
-import ProductsDAOMemory from "../DAO/product/ProductsDAOMemory.js";
-import { config } from "../utils/config.js";
+import ProductsDAOMongo from "../DAO/ProductsDAOMongo.js";
 
-let productsDAO;
-
-switch (config.pers) {
-    case "mongodb":
-        productsDAO = ProductsDAOMongo.createInstance();
-        break;
-    case "file":
-        productsDAO = ProductsDAOFile.createInstance();
-        break;
-    case "memory":
-        productsDAO = ProductsDAOMemory.createInstance();
-        break;
-};
+const productsDAO = ProductsDAOMongo.createInstance();
 
 async function getProducts() {
     return await productsDAO.listAll();

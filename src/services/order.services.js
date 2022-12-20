@@ -1,23 +1,8 @@
-import OrdersDAOMongo from "../DAO/order/OrdersDAOMongo.js";
-import OrdersDAOFile from "../DAO/order/OrdersDAOFile.js";
-import OrdersDAOMemory from "../DAO/order/OrdersDAOMemory.js";
-import { config } from "../utils/config.js";
+import OrdersDAOMongo from "../DAO/OrdersDAOMongo.js";
 import { errorLogger } from "../utils/loggers.js";
 import { nodemailerConfig, twilioConfig } from "../utils/config.js";
 
-let ordersDAO;
-
-switch (config.pers) {
-    case "mongodb":
-        ordersDAO = OrdersDAOMongo.createInstance();
-        break;
-    case "file":
-        ordersDAO = OrdersDAOFile.createInstance();
-        break;
-    case "memory":
-        ordersDAO = OrdersDAOMemory.createInstance();
-        break;
-};
+const ordersDAO = OrdersDAOMongo.createInstance();
 
 async function createNewOrder(products, userEmail) {
     return await ordersDAO.createOrder(products, userEmail);
@@ -29,10 +14,13 @@ async function sendNewOrderEmail(order) {
         const products = order.products;
         let productsList = "";
         let p;
+        let totalPrice = 0;
 
         for (p in products) {
-            productsList += `<li>${products[p].title} x${products[p].quantity}</li>`
+            productsList += `<li>${products[p].title} x${products[p].quantity}</li>`;
         };
+
+        products.forEach((product) => totalPrice += (product.price * product.quantity));
 
         const emailContent = {
             from: "Coder Ecommerce",
@@ -53,6 +41,8 @@ async function sendNewOrderEmail(order) {
                                 <ul>
                                     ${productsList}
                                 </ul>
+                                <strong>Total: $${totalPrice}</strong>
+                                <br>
                                 <span>${order.createdAt}</span>
                             </div>
                         </div>

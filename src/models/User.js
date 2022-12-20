@@ -28,6 +28,10 @@ const UserSchema = new mongoose.Schema({
   imgUrl: {
     type: String,
   },
+  admin: {
+    type: Boolean,
+    required: true,
+  },
 });
 
 UserSchema.methods.setImgUrl = function setImgUrl(filename) {

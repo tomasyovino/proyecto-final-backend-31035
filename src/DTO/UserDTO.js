@@ -7,6 +7,7 @@ class UserDTO {
         this.birthDate = data.birthDate;
         this.phoneNumber = data.phoneNumber;
         this.imgUrl = data.imgUrl;
+        this.admin = data.admin;
     };
 };
 
