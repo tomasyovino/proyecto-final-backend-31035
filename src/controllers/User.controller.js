@@ -1,5 +1,5 @@
 import { listUserById, findUserByEmail, createNewUser, sendNewUserAdviceEmail, checkUser, listUserDeserialize } from "../services/user.services.js";
-import UserDTO from "../DTO/UserDTO.js";
+import UserDTO from "../persistence/DTO/UserDTO.js";
 
 async function listUserByIdController(id) {
     const user = await listUserById(id);

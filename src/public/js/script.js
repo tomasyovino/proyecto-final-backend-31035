@@ -57,7 +57,7 @@ const buyHandle = async (btn) => {
 
 const deleteProductFromCart = async (btn) => {
     try {
-        const rawResponse = await fetch('/api/cart/product', {
+        const rawResponse = await fetch('/api/cart', {
             method: 'DELETE',
             headers: {
               'Accept': 'application/json',
@@ -65,7 +65,7 @@ const deleteProductFromCart = async (btn) => {
             },
             body: JSON.stringify({ userId: btn.dataset.userid, productId: btn.dataset.productid })
         });
-        const content = rawResponse.json();
+        const content = await rawResponse.json();
         console.log(content);
     } catch (err) {
         console.log(`error: ${err.message}`);

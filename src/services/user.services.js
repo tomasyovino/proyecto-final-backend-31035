@@ -1,4 +1,4 @@
-import UsersDAOMongo from "../DAO/UserDAOMongo.js";
+import UsersDAOMongo from "../persistence/DAO/UserDAOMongo.js";
 import bcrypt from "bcrypt";
 import { nodemailerConfig } from "../utils/config.js";
 import { errorLogger } from "../utils/loggers.js";

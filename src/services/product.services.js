@@ -1,4 +1,4 @@
-import ProductsDAOMongo from "../DAO/ProductsDAOMongo.js";
+import ProductsDAOMongo from "../persistence/DAO/ProductsDAOMongo.js";
 
 const productsDAO = ProductsDAOMongo.createInstance();
 

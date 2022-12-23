@@ -1,4 +1,4 @@
-import CartsDAOMongo from "../DAO/CartsDAOMongo.js";
+import CartsDAOMongo from "../persistence/DAO/CartsDAOMongo.js";
 
 
 const cartsDAO = CartsDAOMongo.createInstance();

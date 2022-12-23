@@ -1,4 +1,4 @@
-import MessagesDAOMongo from "../DAO/MessagesDAOMongo.js";
+import MessagesDAOMongo from "../persistence/DAO/MessagesDAOMongo.js";
 
 const messagesDAO  = MessagesDAOMongo.createInstance();
 

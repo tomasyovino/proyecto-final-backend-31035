@@ -1,4 +1,4 @@
-import OrdersDAOMongo from "../DAO/OrdersDAOMongo.js";
+import OrdersDAOMongo from "../persistence/DAO/OrdersDAOMongo.js";
 import { errorLogger } from "../utils/loggers.js";
 import { nodemailerConfig, twilioConfig } from "../utils/config.js";
 

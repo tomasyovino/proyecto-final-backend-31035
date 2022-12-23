@@ -35,7 +35,7 @@ cartRouter.delete("/:id", async (req, res) => {
   res.send(cart);
 });
 
-cartRouter.delete("/product", async (req, res) => {
+cartRouter.delete("/", async (req, res) => {
   const data = req.body;
   const deleteProductFromCart = await deleteProductFromCartController(data.userId, data.productId);
   res.send(deleteProductFromCart);

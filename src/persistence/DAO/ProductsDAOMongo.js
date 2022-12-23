@@ -1,6 +1,6 @@
-import MongoDbContainer from "../containers/MongoDbContainer.js";
-import { ProductModel } from "../models/Product.js";
-import { errorLogger } from "../utils/loggers.js";
+import MongoDbContainer from "../../containers/MongoDbContainer.js";
+import { ProductModel } from "../../models/Product.js";
+import { errorLogger } from "../../utils/loggers.js";
 
 let instance = null;
 
